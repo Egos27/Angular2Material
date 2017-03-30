@@ -9,14 +9,17 @@ import {RouterModule,Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 //2- esto debe estar y e auto genera
 import { LoginComponent } from './login/login.component';
+import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';
 //3 creo el array para el ruteo
-
-const rutasDenavegacion:Routes =[{path:'login',component:LoginComponent}];
+const rutasDenavegacion:Routes =[{path:'login',component:LoginComponent},
+{path: '',redirectTo :'/login' ,pathMatch:'full'},
+{path:'**',component: PaginaNoEncontradaComponent}];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    PaginaNoEncontradaComponent
   ],
   imports: [
     BrowserModule,
