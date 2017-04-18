@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //1 Agrego la libreria
 import {MaterialModule} from '@angular/material';
+//3 Agrego la libreria
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {RouterModule,Routes} from '@angular/router';
 
@@ -28,7 +30,9 @@ const rutasDenavegacion:Routes =[{path:'login',component:LoginComponent},
     HttpModule,    
     RouterModule.forRoot(rutasDenavegacion),
     //2 Importo la clase
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    //4 importo la clase
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
